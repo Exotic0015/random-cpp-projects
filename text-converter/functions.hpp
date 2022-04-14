@@ -10,7 +10,7 @@ using namespace std;
 string string_to_decimal(string &raw) noexcept {
     string converted{};
     for (char v: raw) {
-        converted += to_string(v) + " ";
+        converted += to_string(v) + ' ';
     }
     return converted;
 }
@@ -18,7 +18,7 @@ string string_to_decimal(string &raw) noexcept {
 string string_to_binary(string &raw) noexcept {
     string converted{};
     for (char v: raw) {
-        converted += bitset<8>(v).to_string() + " ";
+        converted += bitset<8>(v).to_string() + ' ';
     }
     return converted;
 }
@@ -28,7 +28,7 @@ string string_to_hex(string &raw) noexcept {
     for (char v: raw) {
         stringstream stream{};
         stream << hex << (int) v;
-        converted += stream.str() + " ";
+        converted += stream.str() + ' ';
     }
     return converted;
 }
@@ -38,7 +38,7 @@ string string_to_oct(string &raw) noexcept {
     for (char v: raw) {
         stringstream stream{};
         stream << oct << (int) v;
-        converted += stream.str() + " ";
+        converted += stream.str() + ' ';
     }
     return converted;
 }
