@@ -29,7 +29,7 @@ int main() {
 
     // Initialize a pseudorandom rng with a range between 48 ("0" in ASCII) and 122 ("z" in ASCII)
     random_device rng;
-    default_random_engine aa(rng());
+    default_random_engine engine(rng());
     uniform_int_distribution uniform(48, 122);
 
     // Initialize a passphrase string variable
@@ -37,7 +37,7 @@ int main() {
 
     for (size_t i{}; i < count; i++) {
         // Generate a random character
-        char random_char = (char) uniform(aa);
+        char random_char = (char) uniform(engine);
 
         // If the character is in the blacklist, decrement the iterator and start a new iteration
         if (find(begin(blacklist), end(blacklist), random_char) != end(blacklist)) {
