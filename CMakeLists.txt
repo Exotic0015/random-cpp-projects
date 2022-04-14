@@ -8,3 +8,4 @@ add_subdirectory("${PROJECT_SOURCE_DIR}/pseudorandom-password-generator" "${PROJ
 add_subdirectory("${PROJECT_SOURCE_DIR}/fizzbuzz" "${PROJECT_SOURCE_DIR}/fizzbuzz/output")
 add_subdirectory("${PROJECT_SOURCE_DIR}/text-converter" "${PROJECT_SOURCE_DIR}/text-converter/output")
 add_subdirectory("${PROJECT_SOURCE_DIR}/count-characters" "${PROJECT_SOURCE_DIR}/count-characters/output")
+add_subdirectory("${PROJECT_SOURCE_DIR}/rock-paper-scissors" "${PROJECT_SOURCE_DIR}/rock-paper-scissors/output")
