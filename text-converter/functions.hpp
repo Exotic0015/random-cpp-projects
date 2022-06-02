@@ -5,42 +5,40 @@
 #include <bitset>
 #include <iomanip>
 
-using namespace std;
-
-string string_to_decimal(string &raw) noexcept {
-    string converted{};
-    for (char v: raw) {
-        converted += to_string(v) + ' ';
+std::string string_to_decimal(std::string &rawString) noexcept {
+    std::string convertedString{};
+    for (char v: rawString) {
+        convertedString += std::to_string(v) + ' ';
     }
-    return converted;
+    return convertedString;
 }
 
-string string_to_binary(string &raw) noexcept {
-    string converted{};
-    for (char v: raw) {
-        converted += bitset<8>(v).to_string() + ' ';
+std::string string_to_binary(std::string &rawString) noexcept {
+    std::string convertedString{};
+    for (char v: rawString) {
+        convertedString += std::bitset<8>(v).to_string() + ' ';
     }
-    return converted;
+    return convertedString;
 }
 
-string string_to_hex(string &raw) noexcept {
-    string converted{};
-    for (char v: raw) {
-        stringstream stream{};
-        stream << hex << (int) v;
-        converted += stream.str() + ' ';
+std::string string_to_hex(std::string &rawString) noexcept {
+    std::string convertedString{};
+    for (char v: rawString) {
+        std::stringstream stream{};
+        stream << std::hex << (int) v;
+        convertedString += stream.str() + ' ';
     }
-    return converted;
+    return convertedString;
 }
 
-string string_to_oct(string &raw) noexcept {
-    string converted{};
-    for (char v: raw) {
-        stringstream stream{};
-        stream << oct << (int) v;
-        converted += stream.str() + ' ';
+std::string string_to_oct(std::string &rawString) noexcept {
+    std::string convertedString{};
+    for (char v: rawString) {
+        std::stringstream stream{};
+        stream << std::oct << (int) v;
+        convertedString += stream.str() + ' ';
     }
-    return converted;
+    return convertedString;
 }
 
 #endif //TEXT_CONVERTER_FUNCTIONS_HPP
