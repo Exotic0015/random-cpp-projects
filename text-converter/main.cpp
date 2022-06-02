@@ -5,16 +5,16 @@
 using namespace std;
 
 int main() {
-    string raw{};
+    string rawString{};
     cout << "Enter a string: ";
-    cin >> raw;
+    cin >> rawString;
 
     cout << endl;
 
-    cout << "Decimal: " << string_to_decimal(raw) << endl;
-    cout << "Binary: " << string_to_binary(raw) << endl;
-    cout << "Hex: " << string_to_hex(raw) << endl;
-    cout << "Oct: " << string_to_oct(raw) << endl;
+    cout << "Decimal: " << string_to_decimal(rawString) << endl;
+    cout << "Binary: " << string_to_binary(rawString) << endl;
+    cout << "Hex: " << string_to_hex(rawString) << endl;
+    cout << "Oct: " << string_to_oct(rawString) << endl;
 
     return 0;
 }
