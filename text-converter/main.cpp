@@ -11,10 +11,10 @@ int main() {
 
     cout << endl;
 
-    cout << "Decimal: " << string_to_decimal(rawString) << endl;
-    cout << "Binary: " << string_to_binary(rawString) << endl;
-    cout << "Hex: " << string_to_hex(rawString) << endl;
-    cout << "Oct: " << string_to_oct(rawString) << endl;
+    cout << "Decimal: " << text_converter::string_to_decimal(rawString) << endl;
+    cout << "Binary: " << text_converter::string_to_binary(rawString) << endl;
+    cout << "Hex: " << text_converter::string_to_hex(rawString) << endl;
+    cout << "Oct: " << text_converter::string_to_oct(rawString) << endl;
 
     return 0;
 }
