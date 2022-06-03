@@ -6,7 +6,7 @@
 #include <iomanip>
 
 namespace text_converter {
-    std::string string_to_decimal(const std::string &rawString) noexcept {
+    std::string stringToDecimal(const std::string &rawString) noexcept {
         std::string convertedString{};
         for (char v: rawString) {
             convertedString += std::to_string(v) + ' ';
@@ -15,7 +15,7 @@ namespace text_converter {
         return convertedString;
     }
 
-    std::string string_to_binary(const std::string &rawString) noexcept {
+    std::string stringToBinary(const std::string &rawString) noexcept {
         std::string convertedString{};
         for (char v: rawString) {
             convertedString += std::bitset<8>(v).to_string() + ' ';
@@ -24,7 +24,7 @@ namespace text_converter {
         return convertedString;
     }
 
-    std::string string_to_hex(const std::string &rawString) noexcept {
+    std::string stringToHexadecimal(const std::string &rawString) noexcept {
         std::string convertedString{};
         for (char v: rawString) {
             std::stringstream stream{};
@@ -35,7 +35,7 @@ namespace text_converter {
         return convertedString;
     }
 
-    std::string string_to_oct(const std::string &rawString) noexcept {
+    std::string stringToOctal(const std::string &rawString) noexcept {
         std::string convertedString{};
         for (char v: rawString) {
             std::stringstream stream{};
